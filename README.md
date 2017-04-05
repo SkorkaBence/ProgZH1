@@ -1,44 +1,45 @@
-** ZH feladat
-Készülünk a házibulira, így nagybevásárlást kell végeznünk...:) Sajnos viszont nagyon sok a bolt és sok az ár amit számításba kell vennünk. Szerencsére a banda aktív tagjai összeszedték egy fájlba hogy melyik szükséges termék mennyibe kerül a különbözõ helyeken. Csak annyi van hátra, hogy írjunk egy programot ami megtalálja azt a boltot ahol minden szükséges dolog megvan és a legjobban járunk. A legjobban járunkot úgy értjük, hogy az árak átlaga minimális.
-** Bemenet
-A bemenetet az input.txt nevû fájlból kell olvassuk. Bemenõ adatként a boltban az árakat találjuk mátrixos alakban. Elõször a boltok száma, majd a szükséges termékek száma. A mátrix egy értéke egy egész szám ami forintban adja az árat. Ha egy adott termék nem található a boltban, akkor azt a -1 értékkel jelöljük.
-5 4
-1210 1200 200 1400
-1250 1270 -1 1300
-1200 1300 500 1400
-1195 -1 300 1200
-1200 1300 100 -1
-** Output
-A kimenet válasza egy index kell legyen ha van megfelelõ. Abban az esetben ha nincs a feltételeknek megfelelõ akkor NM legyen a kimenet.
-A fenti minta bemenetre az eredmény:
-1
-Fontos: A kimenet pontosan ez legyen, se több se kevesebb.:)
-** Elõfeltételek
-Az elõfeltétel megsértésének esetében a zárójelben megadottakat írja ki a program!
-Számosság nem lehet negatív (NC)
-Egy érték sem lehet több 10000-nél (HV)
-Egy érték sem lehet kisebb -1-nél (LV)
-Minden érték öttel osztható vagy -1 kell legyen (IV)
-Megfelelõ kell legyen az input, nem tartalmazhat szöveget például (WI)
-** +1
-Írjuk meg kommentben az adatokat beolvasó függvényt úgy hogy az elején nincs számosság jelölés, csak maga az adat, így logikusan a sorok száma adja a boltok számát és az egy sorban található értékek száma a szükséges termékek számát.
-** ZH alap tudnivalók
-Mindenféle nyomtatott segédeszköz használata szabályos (igen, akár az egész internetet kinyomtathatod)
-Bárminemû kommunikáció vagy közös munka azonnali kizárás
-Attól függetlenül, hogy kinyomtatva lehet bármit használni gépen ez tilos (csak GT oldala használható a ZH alatt)!
-** ZH elvárás
-Vector osztály használata.
-Függvényekre bontott feladatmegoldás.
-A kész program fájlból olvasson be (fixen az input.txt -bõl).
-A feladatban megadott kimenetet adja meg a program a konzolra.
-Készítsünk teszteseteket, amiket a programkód végére írunk kommentbe.
-5-6 teszteset kell, amivel rávilágítunk a kritikus lefutási esetekre.
-A minta bemenet majd utána a minta kimenetet adjátok meg, hogy mikre teszteltétek a programot.
-A program input.txt nevû fájlból olvasson be.
-** ZH értékelés
-A egyszerûbb esetekre (nagyjából az elsõ 5-6 teszteset) helyes eredményt adjon vissza (kettes)
-A program minden elõfeltételeknek megfelelõ esetre helyes eredményt adjon vissza
-Kód tagoltsága, egységesség, átláthatóság, értelmes elnevezések
-A program elõfeltételeknek nem megfelelõ esetekre is jó reagál (try-catch-el)
-A kód szépsége
-Minden egyes helytelen feltöltési próbálkozás csökkenti a ZH eredményét (az elsõ 5 semmivel nem csökkenti)
+# ProgramozÃ¡s 1. ZH
+## ZH feladat
+KÃ©szÃ¼lÃ¼nk a hÃ¡zibulira, Ã­gy nagybevÃ¡sÃ¡rlÃ¡st kell vÃ©geznÃ¼nk...:) Sajnos viszont nagyon sok a bolt Ã©s sok az Ã¡r amit szÃ¡mÃ­tÃ¡sba kell vennÃ¼nk. SzerencsÃ©re a banda aktÃ­v tagjai Ã¶sszeszedtÃ©k egy fÃ¡jlba hogy melyik szÃ¼ksÃ©ges termÃ©k mennyibe kerÃ¼l a kÃ¼lÃ¶nbÃ¶zÅ‘ helyeken. Csak annyi van hÃ¡tra, hogy Ã­rjunk egy programot ami megtalÃ¡lja azt a boltot ahol minden szÃ¼ksÃ©ges dolog megvan Ã©s a legjobban jÃ¡runk. A legjobban jÃ¡runkot Ãºgy Ã©rtjÃ¼k, hogy az Ã¡rak Ã¡tlaga minimÃ¡lis.<br />
+## Bemenet
+A bemenetet az input.txt nevÅ± fÃ¡jlbÃ³l kell olvassuk. BemenÅ‘ adatkÃ©nt a boltban az Ã¡rakat talÃ¡ljuk mÃ¡trixos alakban. ElÅ‘szÃ¶r a boltok szÃ¡ma, majd a szÃ¼ksÃ©ges termÃ©kek szÃ¡ma. A mÃ¡trix egy Ã©rtÃ©ke egy egÃ©sz szÃ¡m ami forintban adja az Ã¡rat. Ha egy adott termÃ©k nem talÃ¡lhatÃ³ a boltban, akkor azt a -1 Ã©rtÃ©kkel jelÃ¶ljÃ¼k.<br />
+5 4<br />
+1210 1200 200 1400<br />
+1250 1270 -1 1300<br />
+1200 1300 500 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+## Output
+A kimenet vÃ¡lasza egy index kell legyen ha van megfelelÅ‘. Abban az esetben ha nincs a feltÃ©teleknek megfelelÅ‘ akkor NM legyen a kimenet.
+A fenti minta bemenetre az eredmÃ©ny:<br />
+1<br />
+Fontos: A kimenet pontosan ez legyen, se tÃ¶bb se kevesebb.:)
+## ElÅ‘feltÃ©telek
+Az elÅ‘feltÃ©tel megsÃ©rtÃ©sÃ©nek esetÃ©ben a zÃ¡rÃ³jelben megadottakat Ã­rja ki a program!<br />
+* SzÃ¡mossÃ¡g nem lehet negatÃ­v (NC)<br />
+* Egy Ã©rtÃ©k sem lehet tÃ¶bb 10000-nÃ©l (HV)<br />
+* Egy Ã©rtÃ©k sem lehet kisebb -1-nÃ©l (LV)<br />
+* Minden Ã©rtÃ©k Ã¶ttel oszthatÃ³ vagy -1 kell legyen (IV)<br />
+* MegfelelÅ‘ kell legyen az input, nem tartalmazhat szÃ¶veget pÃ©ldÃ¡ul (WI)<br />
+## +1
+Ãrjuk meg kommentben az adatokat beolvasÃ³ fÃ¼ggvÃ©nyt Ãºgy hogy az elejÃ©n nincs szÃ¡mossÃ¡g jelÃ¶lÃ©s, csak maga az adat, Ã­gy logikusan a sorok szÃ¡ma adja a boltok szÃ¡mÃ¡t Ã©s az egy sorban talÃ¡lhatÃ³ Ã©rtÃ©kek szÃ¡ma a szÃ¼ksÃ©ges termÃ©kek szÃ¡mÃ¡t.
+## ZH alap tudnivalÃ³k
+* MindenfÃ©le nyomtatott segÃ©deszkÃ¶z hasznÃ¡lata szabÃ¡lyos (igen, akÃ¡r az egÃ©sz internetet kinyomtathatod)<br />
+* BÃ¡rminemÅ± kommunikÃ¡ciÃ³ vagy kÃ¶zÃ¶s munka azonnali kizÃ¡rÃ¡s<br />
+* AttÃ³l fÃ¼ggetlenÃ¼l, hogy kinyomtatva lehet bÃ¡rmit hasznÃ¡lni gÃ©pen ez tilos (csak GT oldala hasznÃ¡lhatÃ³ a ZH alatt)!<br />
+## ZH elvÃ¡rÃ¡s
+* Vector osztÃ¡ly hasznÃ¡lata.<br />
+* FÃ¼ggvÃ©nyekre bontott feladatmegoldÃ¡s.<br />
+* A kÃ©sz program fÃ¡jlbÃ³l olvasson be (fixen az input.txt -bÅ‘l).<br />
+* A feladatban megadott kimenetet adja meg a program a konzolra.<br />
+* KÃ©szÃ­tsÃ¼nk teszteseteket, amiket a programkÃ³d vÃ©gÃ©re Ã­runk kommentbe.<br />
+* 5-6 teszteset kell, amivel rÃ¡vilÃ¡gÃ­tunk a kritikus lefutÃ¡si esetekre.<br />
+* A minta bemenet majd utÃ¡na a minta kimenetet adjÃ¡tok meg, hogy mikre teszteltÃ©tek a programot.<br />
+* A program input.txt nevÅ± fÃ¡jlbÃ³l olvasson be.<br />
+## ZH Ã©rtÃ©kelÃ©s
+* A egyszerÅ±bb esetekre (nagyjÃ¡bÃ³l az elsÅ‘ 5-6 teszteset) helyes eredmÃ©nyt adjon vissza (kettes)<br />
+* A program minden elÅ‘feltÃ©teleknek megfelelÅ‘ esetre helyes eredmÃ©nyt adjon vissza<br />
+* KÃ³d tagoltsÃ¡ga, egysÃ©gessÃ©g, Ã¡tlÃ¡thatÃ³sÃ¡g, Ã©rtelmes elnevezÃ©sek<br />
+* A program elÅ‘feltÃ©teleknek nem megfelelÅ‘ esetekre is jÃ³ reagÃ¡l (try-catch-el)<br />
+* A kÃ³d szÃ©psÃ©ge<br />
+* Minden egyes helytelen feltÃ¶ltÃ©si prÃ³bÃ¡lkozÃ¡s csÃ¶kkenti a ZH eredmÃ©nyÃ©t (az elsÅ‘ 5 semmivel nem csÃ¶kkenti)<br />
