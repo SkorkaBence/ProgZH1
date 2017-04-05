@@ -43,3 +43,92 @@ Az előfeltétel megsértésének esetében a zárójelben megadottakat írja ki
 * A program előfeltételeknek nem megfelelő esetekre is jó reagál (try-catch-el)<br />
 * A kód szépsége<br />
 * Minden egyes helytelen feltöltési próbálkozás csökkenti a ZH eredményét (az első 5 semmivel nem csökkenti)<br />
+## Tesztadatok<br />
+### 01 input
+5 4<br />
+1210 1200 200 1400<br />
+1250 1270 -1 1300<br />
+1200 1300 500 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: 1<br />
+### 02 input
+5 4<br />
+1250 1270 -1 1300<br />
+1200 1300 500 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+1210 1200 580 1400<br />
+Expected Output: 5<br />
+### 03 input
+1 4<br />
+1200 1300 500 1400<br />
+Expected Output: 1<br />
+### 04 input
+5 4<br />
+1200 1300 -1 1400<br />
+1250 1270 -1 1300<br />
+6210 6200 2000 2000<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: 3<br />
+### 05 input
+5 4<br />
+1200 1300 500 -1<br />
+1250 1270 -1 1300<br />
+1210 1200 -1 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: NM<br />
+### 06 input
+1 -1<br />
+Expected Output: NC<br />
+### 07 input
+1<br />
+-1<br />
+Expected Output: NC<br />
+### 08 input
+5 4<br />
+1200 1300 500 1400<br />
+1250 1270 999999 1300<br />
+1210 1200 200 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: HV<br />
+### 09 input
+5 4<br />
+1200 1300 500 1400<br />
+1250 1270 -15 1300<br />
+1210 1200 200 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: LV<br />
+### 10 input
+5 4<br />
+1200 1300 500 1400<br />
+1250 1270 -1 1300<br />
+1210 1200 201 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: IV<br />
+### 11 input
+5 asd<br />
+1200 1300 500 1400<br />
+1250 1270 -1 1300<br />
+1210 1200 200 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: WI<br />
+### 12 input
+5 4<br />
+1200 1300 500 asd<br />
+1250 1270 -1 1300<br />
+1210 1200 200 1400<br />
+1195 -1 300 1200<br />
+1200 1300 100 -1<br />
+Expected Output: WI<br />
+### 13 input
+2 12<br />
+200 200 305 200 200 200 200 200 200 200 200 200<br />
+200 200 300 200 200 200 200 200 200 200 200 200<br />
+Expected Output: 2<br />
